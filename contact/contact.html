@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+
+    <!-- for the cursor follower -->
+    <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
+    <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+
+    <!-- for the font families -->
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@200,500,300,600,400,700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <main data-scroll-container class="main">
+
+        <section data-scroll-section class="contact-image-section">
+
+         <!-- THE HAMBURGER BUTTON  -->
+         <div class="hamburger-button">
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <!-- PAGE HEADER IS POSITIONED INSIDE THIS SECTION -->
+            <header data-scroll-section class="header">
+                <nav class="navbar">
+                    <div class="logo">
+                        <a href="index.html">T<span>c</span> </a>
+                    </div>
+    
+                    <div class="menu-links">
+                        <ul>
+                            <li class="menu-links-list-items"><a href="../index.html">home</a></li>
+                            <li class="menu-links-list-items"><a href="../about/about.html">about</a></li>
+                            <li class="menu-links-list-items active-link"><a href="contact.html">contact</a></li>
+                            <!-- <li class="menu-links-list-items"><a href="">cargo</a></li> -->
+                            <li class="menu-links-list-items"><a href="../login/login.html">login</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+            
+            <div data-scroll data-scroll-speed="3" class="image-container">
+                <img src="../images/sf.jpg" alt="">
+            </div>
+        </section>
+        
+        <section data-scroll-section class="contact-section">
+            <div class="contact-container">
+    
+                <div class="reach-us-container">
+    
+                    <div class="numbers-and-working-hours">
+                            <div class="numbers">
+                                <h2>General Inquiries</h2>
+                                <p>+254 700 000 111</p>
+                                
+                            </div>
+                                
+                            <div class="email">
+                                <h2>Email </h2>
+                                <p>  info@transcargo.com</p>
+        
+                            </div>
+        
+                            <div class="whatsapp">
+                                <h2>Transport Inquiries</h2>
+                                <p>+254 700 200 300</p>                                </div>
+        
+                            <div class="address">
+                                <h2>Address</h2>
+                                <p>P.O BOX 17553 - 00500</p>
+                            </div>
+
+
+                                    
+
+    
+                        
+
+                    </div>
+    
+    
+                </div>
+
+                <div class="form-container">
+                    <h1>write to us.</h1>
+                    <p>We're happy to help.</p>
+    
+                    <form action="" id="form">
+    
+                        <div class="info">
+                            <label for="first-name">Your name</label> <br>
+                            <input id="first-name" required type="text" > <br>  <br>
+    
+                            <label for="email">Your email</label> <br>
+                            <input id="last-email" required type="text"> <br> <br>
+    
+                            <label for="phone-number">Phone Number</label> <br>
+                            <input id="phone-number" type="text" required> <br> <br> <br>
+    
+                            <label for="message">Your message</label> <br> <br>
+                            <textarea name="" id="message" placeholder="" cols="35" rows="8"></textarea> <br><br>
+                            <!-- <input type="text" required id="message"> -->
+                            <button type="submit" id="submit">send</button>
+    
+                        </div>
+    
+                    </form>
+    
+                </div>
+
+            </div>
+        </section>
+
+        <footer data-scroll-section class="footer">
+            <div class="footer-section-container">
+                <div data-scroll data-scroll-speed="1.5" class="footer-content">
+                    <div class="address">
+                        <h1>address</h1>
+                        <p>AZ Lane, Parklands, Nairobi</p>
+                        <p>info@transcargo.com</p>
+                        <p>+254 700 000 111</p>
+                    </div>
+
+                    <div class="newsletter">
+                        <h1>join our newsletter</h1>
+                        <input type="email" placeholder="email"> <br>
+                        <button>join</button>
+
+                    </div>
+
+                    <div class="form">
+                        <form action="">
+                            <h1>write us a message</h1>
+                            
+                            <!-- <input type="text" placeholder="Name"> <br> -->
+                            <input type="email" placeholder="Email"> <br>
+                            <select name="" id="">
+                                <option value="">select subject</option>
+                                <option value="">Inquire on services</option>
+                                <option value="">Leave a review</option>
+                                <option value="">Make an Inquiry</option>
+                                <option value="">Make a complaint</option>
+                                <option value="">Other</option>
+                            </select> <br>
+
+                            <textarea name="" placeholder="enter message here" id="" cols="30" rows="4"></textarea> <br>
+                      
+                            <button type="submit">send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+
+    </main>
+
+
+
+    <!-- locomotive-scroll -->
+    <script src="../utils/locomotive-scroll.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+   
+    <script src="../utils/utils.js"></script>
+    <script  src="contact.js"></script>
+</body>
+</html>

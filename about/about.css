@@ -1,0 +1,125 @@
+@import url("../utils/utils.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Satoshi", sans-serif, "General Sans", sans-serif;
+  overflow-x: hidden;
+  background-color: rgb(144, 194, 194);
+  background-color: rgb(202, 216, 248);
+  color: black;
+}
+
+.main {
+  opacity: 0;
+}
+
+.about-image-section {
+  height: 80vh;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.about-image-section .ai-container {
+  height: 100%;
+}
+.about-image-section .ai-container .image-container {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.about-image-section .ai-container .image-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-image-section .ai-container .about-text {
+  position: absolute;
+  top: 50%;
+  width: 60%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+.about-image-section .ai-container .about-text h1 {
+  color: white;
+  opacity: 0.9;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.about-us-info-section {
+  margin-bottom: 12rem;
+}
+.about-us-info-section .aui-container h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  color: black;
+  padding: 3rem;
+}
+.about-us-info-section .aui-container .aui-content {
+  display: grid;
+  place-items: center;
+}
+.about-us-info-section .aui-container .aui-content .values-container {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about-us-info-section .aui-container .aui-content .values-container h1 {
+  text-transform: capitalize;
+  font-size: 2.2rem;
+  color: black;
+  font-weight: 700;
+  padding: 1.5rem 0;
+}
+.about-us-info-section .aui-container .aui-content .values-container p {
+  line-height: 140%;
+  font-size: 1.6rem;
+  color: black;
+  font-weight: 700;
+}
+.about-us-info-section .aui-container .aui-content .values-container div {
+  padding: 2rem;
+  margin: 1.4rem;
+}
+
+@media screen and (max-width: 1040px) {
+  .about-image-section .ai-container .about-text h1 br {
+    content: " ";
+  }
+  .about-image-section .ai-container .about-text h1 br:after {
+    content: " ";
+  }
+}
+@media screen and (max-width: 905px) {
+  .about-image-section .ai-container .about-text {
+    width: 80%;
+  }
+  .about-image-section .ai-container .about-text h1 {
+    font-size: 2.1rem;
+  }
+  .about-us-info-section .aui-container .aui-content .values-container {
+    width: 97%;
+  }
+}
+@media screen and (max-width: 664px) {
+  .about-us-info-section .aui-container .aui-content .values-container {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+  .about-us-info-section .aui-container .aui-content .values-container h1 {
+    font-size: 2rem;
+  }
+  .about-us-info-section .aui-container .aui-content .values-container p {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=about.css.map */

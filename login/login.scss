@@ -1,0 +1,201 @@
+
+// importing css to style the header and footer
+@import url('../utils/utils.css');
+
+$web-font1:"Satoshi", sans-serif;
+$web-font2:"General Sans", sans-serif;
+// font weights
+
+$light:300;
+$regular:400;
+$medium:500;
+$bold:700;
+$black:900;
+
+button{
+    cursor: pointer;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: $web-font1,$web-font2;
+    overflow-x: hidden;
+    color: black;
+}
+
+.login-image-section{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    // height: auto;
+
+
+    //POSITIONED ABSOLUTELY
+    .login-header-and-form{
+        position: absolute;
+        width: 100%;
+        
+        height: 60%;
+        top: 23vh;
+        left: 0;
+        // border: 1px solid red;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .login-header{
+            display: grid;
+            place-items: center;
+            h2{
+                // padding-left: 3rem;
+                font-size: 4rem;
+                font: $black;
+                color: white;
+            }
+
+
+        }
+ 
+
+        .login{
+
+            border: 1px solid black;
+            padding: 3rem 7rem;
+            background-color: whitesmoke;
+        
+        
+            .login-container{
+        
+        
+                .login-content{
+                    display: grid;
+                    place-items: center;
+        
+        
+                    h1{
+                        text-align: center;
+                        font-size: 1.8rem;
+                    }
+                    #form{
+                        padding: 4rem 2rem;
+        
+                        .fp{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                     
+                            .rm-div{
+                                span{
+                                    font-size: 1.3rem;
+                                    font-weight: $medium;
+                                    color: black;
+                                    padding-left: 0.4rem;
+                                }
+                            }
+        
+                            a{
+                                font-size: 1.3rem;
+                                color: blue;
+                                text-transform: capitalize;
+                                font-weight: $medium;
+        
+                            }
+            
+                     
+                        }
+        
+                        input{
+                            margin: 2rem 0;
+                            color: black;
+                            font-weight: $bold;
+                            font-size: 1.4rem;
+                            padding: 1.4rem 2rem;
+                            background-color: white;
+                            border:1px solid blue;
+                            border-bottom: 1px solid black;
+                        }
+        
+                        button{
+                            margin-top: 2rem;
+                            width: 100%;
+                            background-color: blue;
+                            color: white;
+                            font-weight: $black;
+                            text-transform: capitalize;
+                            font-size: 1.3rem;
+                            border: none;
+                            border-radius: .3rem;
+                            padding: 1.3rem 2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
+
+    .login-section-container{
+        height: 100%;
+        width: 100%;
+
+        .login-section-content{
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
+
+@media screen and(max-width:800px) {
+    .login-image-section{
+        .login-header-and-form{
+            .login-header{
+                display: none;
+
+            }
+        }
+    }
+}
+
+@media screen and(max-width:500px) {
+    .login-image-section{
+        .login-header-and-form{
+
+            .login{
+                padding: unset;
+                padding: 2rem;
+            }
+        }
+    }
+}
+@media screen and(max-width:320px) {
+    .login-image-section{
+        .login-header-and-form{
+
+            .login{
+                padding: 1.4rem;
+            }
+        }
+    }
+}

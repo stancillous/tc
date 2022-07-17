@@ -1,0 +1,676 @@
+
+// importing css to style the header and footer
+@import url('utils/utils.css');
+
+$web-font1:"Satoshi", sans-serif;
+$web-font2:"General Sans", sans-serif;
+// font weights
+
+$light:300;
+$regular:400;
+$medium:500;
+$bold:700;
+$black:900;
+
+button{
+    cursor: pointer;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: $web-font1,$web-font2;
+    overflow-x: hidden;
+    color: black;
+    background-color: rgb(202, 216, 248);
+}
+
+// setting initial page opacity to 0
+.main{
+    opacity: 0;
+}
+
+
+// TOP SECTION
+
+.top-section{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+
+
+
+    //THE HERO IMAGE
+    .image-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+    }
+
+    .ts-container{
+        // padding-top: 10vh;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // border: 2px solid white;
+
+        .ts-content{
+            //top section heading
+            // border: 2px solid red;
+            padding:0 5rem;
+            // border: 2px solid  red;
+            .heading{
+                h1{
+                    padding: 1rem;
+                    color: white;
+                    font-weight: $black;
+                    font-size: 6rem;
+                    text-transform: capitalize;
+                }
+            }
+
+            //top section paragraph
+            .ts-p{
+                p{
+                    padding: 1rem;
+                    color: white;
+                    opacity: .9;
+                    font-size: 2rem;
+                    font-weight: $bold;
+                    // width: 70%;
+                }
+            }
+
+            //top section button
+            .button-container{
+                padding: 1rem;
+                button{
+                    background-color: white;
+                    opacity:.9;
+                    color: black;
+                    font-weight: $bold;
+                    text-transform: uppercase;
+                    font-size: 1.4rem;
+                    border: none;
+                    border-radius: .2rem;
+                    padding: 1.4rem 2.5rem;
+
+                    a{
+                        color: black;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//ABOUT US SECTION
+
+.about-us-section{
+
+    min-height: 50vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // border: 2px solid;
+    .au-container{
+        // border: 1px solid black;
+        // padding: 2rem;
+        width: 70%;
+
+        .auc-parent{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .au-content{
+                // border: 1px solid rgb(59, 73, 225);
+                width: 100%;
+                display: flex;
+                padding: 3rem 1rem;
+                // border: 1px solid red;
+
+                .au-headings{
+                    border-right: 1px solid black;
+                   display: flex;
+                //    border: 1px solid black;
+                   padding-right: 2rem;
+                   flex-direction: column;
+                    justify-content: space-around;
+               
+                    h1{
+                        cursor: pointer;
+                        padding: 1.2rem 0;
+                        width: 16rem;
+                        text-transform:uppercase;
+                        font-size: 1.5rem;
+                        text-align: center;
+                        font-weight: $black;
+                    }
+                }
+            }
+
+            .au-p{
+
+                p{
+                    font-size: 1.6rem;
+                    font-weight: $bold;
+                    padding:0 3rem ;
+  
+                }
+            }
+        }
+    }
+}
+
+.freight-section{
+    // min-height: 100vh;
+    height: 80vh;
+    width: 100vw;
+
+    .fs-container{
+        position: relative;
+        height: 100%;
+        .freight-image-container{
+            width: 100%;
+            height: 100%;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        // <!-- this div is to be positioned absolutely . centered inside the image
+        .f-heading-parent{
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            // border: 2px solid;
+            transform: translate(50%,-50%);
+
+
+            h1{
+                color: white;
+                font-weight: $black;
+                font-size: 2.8rem;
+                text-transform: capitalize;
+                
+            }
+        }
+    }
+}
+
+.freight-content-section{
+    min-height: 50vh;
+    // border: 2px solid;
+    display: grid;
+    place-items: center;
+
+    .fcs-container{
+        display: grid;
+        place-items: center;
+        // border: 2px solid red;
+        width: 70%;
+        .fsc-content{
+            display: grid;
+            grid-gap: 3rem;
+            grid-template-columns: 1fr 1fr;
+            p{
+                font-size: 1.8rem;
+                font-weight: $bold;
+                color: black;
+                padding: 1rem;
+                padding: 2rem 0;
+                line-height: 160%;
+            }
+
+        }
+    }
+}
+
+//REVIEWS SECTION
+.reviews-section{
+    height:100vh;
+    width: 100vw;
+    // background-color: white;
+    padding: 8rem 4rem;
+    display: flex;
+    // border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+    
+    .rs-container{
+        height: 100%;
+        width: 45%;
+        // border: 1px solid blue;
+        position: relative;
+
+        #arrowLeft{
+            position: absolute;
+            top: 60%;
+            font-size: 3.5rem;
+            left: -10%;
+            color: rgb(25, 33, 255);
+            cursor: pointer;
+        }
+
+        #arrowRight{
+            position: absolute;
+            top: 60%;
+            font-size: 3.5rem;
+            right: -10%;
+            color: rgb(25, 33, 255);
+            cursor: pointer;
+        }
+
+        h1{
+            font-size: 2.7rem;
+            text-transform: capitalize;
+            color: black;
+            padding: 2rem 0;
+            text-align: center;
+            font-weight: $black;
+            // border: 1px solid;
+        }
+
+
+        .rs-content{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // border: 2px solid green;
+
+
+            .review{
+                
+                width: 100%;
+                padding: 4rem;
+                border: 1px solid rgb(0, 0, 0);
+                background-color: white;
+                .review-image{
+                    height: 8rem;
+                    width: 8rem;
+                    border-radius: 50%;
+                    border: 2px double rgb(0, 0, 0);
+                }
+                .review-name{
+                    font-size: 1.7rem;
+                    font-style: italic;
+                    color: black;
+                    opacity: .9;
+                    font-weight: $medium;
+
+                }
+                .review-text{
+                    font-weight: $bold;
+                    font-size: 1.8rem;
+                    color: black;
+                    padding-top: 2rem;
+                }
+            }
+        }
+    }
+}
+
+
+//CLASSES TO BE TOGGLED
+
+.top-section .hamburger-button:hover{
+    span{
+        &:nth-child(1){
+            transform: translateX(-.4rem);
+        }
+        &:nth-child(2){
+            // width: 2.8rem;
+            transform: translateX(.4rem);
+        }
+    }
+}
+
+//class to be added when the button is clicked
+.top-section .hamburger-button.hamburgerClicked{
+
+    span{
+        &:nth-child(1){
+            // background-color: red;
+            width: 3.3rem;
+            transform: translate(.1rem,.9rem)rotate(-45deg);
+        }
+        &:nth-child(2){
+            width: 3.3rem;
+            transform: translate(-.1rem,-.01rem)rotate(45deg);
+        }
+    }
+}
+
+
+//CLASS TO SHOW THE MENU LINKS
+
+
+.top-section .header .navbar .menu-links.showlinks{
+    clip-path: inset(0 0 0 0);
+}
+
+
+//CLASS TO BE TOGGLED TO THE ABOUT US SECTION ACTIVE HEADERS
+.about-us-section .au-container .auc-parent .au-content .au-headings .active{
+    position: relative;
+    // border: 2px solid;
+    background-color: blue;
+    border-radius: .2rem;
+    color: white;
+
+}
+
+//FOR LARGER SCREENS
+
+@media screen and(min-width:1370px) {
+    
+    //about section
+    .about-us-section{
+        .au-container{
+            width: 55%;
+        }
+    }
+
+    //freight content section
+
+    .freight-content-section{
+        .fcs-container{
+            width: 55%;
+        }
+    }
+
+    //review section
+    .reviews-section{
+        .rs-container{
+            width: 41%;
+        }
+    }
+}
+
+@media screen and(min-width:1700px) {
+    
+    //about section
+    .about-us-section{
+        .au-container{
+            width: 46%;
+        }
+    }
+
+    //freight content section
+
+    .freight-content-section{
+        .fcs-container{
+            width: 56%;
+        }
+    }
+
+    //review section
+    .reviews-section{
+        .rs-container{
+            width: 38%;
+        }
+    }
+}
+
+
+
+
+//FOR SMALLER SCREENS
+@media screen and(max-width:1030px) {
+    
+    .reviews-section{
+        .rs-container{
+            width: 60%;
+        }
+    }
+}
+
+@media screen and(max-width:800px) {
+    //top page section
+    .top-section .ts-container .ts-content{
+        .heading{
+            h1{
+                font-size: 4.4rem;
+            }    
+        }
+
+            
+        .ts-p{
+            p{
+                font-size: 1.7rem;
+
+            }
+        }
+    } 
+
+    //about us section
+    .about-us-section{
+        .au-container{
+            width: 94%;
+        }
+    }
+
+    //the content after the images
+    .freight-content-section{
+        .fcs-container{
+            width: 94%;
+
+            .fsc-content{
+                p{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:760px) {
+    
+    .reviews-section{
+        .rs-container{
+            width: 70%;
+
+            h1{
+                font-size: 2.4rem;
+            }
+
+            .rs-content{
+                .review{
+                    padding: 5rem 2rem;
+
+                    .review-text{
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//SHOWING THE HAMBURGER BUTTON AND HIDING THE LINKS
+@media screen and(max-width:600px) {
+
+
+
+    .top-section .ts-container .ts-content{
+        padding: 2rem;
+
+   
+        .heading{
+            h1{
+                font-size: 3.8rem;
+            }    
+        }
+
+            
+        .ts-p{
+            p{
+                font-size: 1.6rem;
+                br{content:' ';}
+                br:after{content:' ';}
+            }
+        }
+    } 
+
+    //changing the display of the about us section
+    .about-us-section{
+        .au-container{
+            .auc-parent{
+                border: 1px solid;
+                .au-content{
+                    // background-color: red;
+                    flex-direction: column;
+
+                    .au-headings{
+                        display: flex;
+                        border: unset;
+                        border: 1px solid ;
+                        flex-direction: unset;
+                        // background-color: blue;
+                        margin-bottom: 4rem;
+                        padding: unset;
+
+                        h1{
+                            width: auto;
+                            font-size: 1.3rem;
+                            padding: 1rem;
+                        }
+                    }
+                }
+
+                .au-p{
+                    p{
+                        padding: 1rem;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+    //the content after the images
+    .freight-content-section{
+        .fcs-container{
+            width: 90%;
+
+            .fsc-content{
+                grid-template-columns: 1fr;
+
+            }
+        }
+    }
+
+    //review section
+    .reviews-section{
+        .rs-container{
+            width: 95%;
+
+            h1{
+                font-size: 2.2rem;
+            }
+
+            .rs-content{
+                .review{
+                    padding: 5rem 1.5rem;
+
+                    .review-image{
+                        width: 6rem;
+                        height: 6rem;
+                    }
+                    .review-name{
+                        font-size: 1.5rem;
+                    }
+
+                    .review-text{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and(max-width:500px) {
+    //top page section
+    .top-section .ts-container .ts-content{
+        padding: 2rem;
+        .heading{
+            h1{
+                font-size: 3.4rem;
+            }    
+        }
+
+            
+        .ts-p{
+            p{
+                font-size: 1.5rem;
+    
+            }
+        }
+
+        .button-container{
+            button{
+                padding: 1rem 1.3rem;
+            }
+        }
+    } 
+
+        //review section
+        .reviews-section{
+            height: 150vh;
+            .rs-container{
+                width: 95%;
+
+                #arrowRight,#arrowLeft{
+                    top: 70%;
+                }
+    
+                h1{
+                    font-size: 2rem;
+                }
+    
+                .rs-content{
+                    .review{
+
+                        .review-name{
+                            font-size: 1.3rem;
+                        }
+    
+                        .review-text{
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+
+}

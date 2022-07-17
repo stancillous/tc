@@ -1,0 +1,189 @@
+@import url("../utils/utils.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Satoshi", sans-serif, "General Sans", sans-serif;
+  overflow-x: hidden;
+  background-color: rgb(202, 216, 248);
+  color: black;
+}
+
+.main {
+  opacity: 0;
+}
+
+.contact-image-section {
+  height: 80vh;
+  width: 100vw;
+  position: relative;
+}
+.contact-image-section .image-container {
+  height: 100%;
+  z-index: -1;
+  width: 100%;
+}
+.contact-image-section .image-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contact-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 3rem;
+  color: black;
+}
+.contact-section .contact-container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact-section .contact-container .reach-us-container {
+  border-right: 1px solid black;
+}
+.contact-section .contact-container .reach-us-container .numbers-and-working-hours {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact-section .contact-container .reach-us-container .numbers-and-working-hours div {
+  margin: 1rem;
+  padding: 1rem;
+}
+.contact-section .contact-container .reach-us-container .numbers-and-working-hours div h2 {
+  font-size: 1.7rem;
+  font-weight: 900;
+  opacity: 0.9;
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  padding-top: 3rem;
+}
+.contact-section .contact-container .reach-us-container .numbers-and-working-hours div p {
+  font-weight: 700;
+  font-size: 1.5rem;
+  opacity: 0.9;
+  padding: 0.5rem 0;
+}
+.contact-section .contact-container .form-container {
+  margin: 2rem;
+}
+.contact-section .contact-container .form-container h1 {
+  font-size: 2.6rem;
+  text-transform: capitalize;
+  opacity: 0.9;
+  font-weight: 700;
+  padding: 0 1rem;
+}
+.contact-section .contact-container .form-container p {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem;
+  padding-bottom: 4rem;
+}
+.contact-section .contact-container .form-container #form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-section .contact-container .form-container #form .info {
+  padding: 3rem 1rem;
+  width: 100%;
+}
+.contact-section .contact-container .form-container #form .info label {
+  font-size: 1.6rem;
+  opacity: 0.9;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+}
+.contact-section .contact-container .form-container #form .info input {
+  padding: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.4rem;
+  background-color: transparent;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+.contact-section .contact-container .form-container #form .info input:focus {
+  outline: none;
+  border: 1px solid rgb(0, 0, 0);
+}
+.contact-section .contact-container .form-container #form .info #message {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: black;
+  padding: 1rem;
+  font-family: "Satoshi", sans-serif, "General Sans", sans-serif;
+}
+.contact-section .contact-container .form-container #form .info button {
+  padding: 1.5rem 4rem;
+  border: none;
+  color: white;
+  font-weight: 700;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: darkblue;
+}
+
+@media screen and (min-width: 1380px) {
+  .contact-section .contact-container {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .contact-section .contact-container {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 960px) {
+  .contact-section .contact-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-section .contact-container .reach-us-container {
+    border: unset;
+    border-bottom: 1px solid black;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    padding-bottom: 4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact-section .contact-container {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 503px) {
+  .contact-section .contact-container {
+    width: 95%;
+  }
+  .contact-section .contact-container .reach-us-container .numbers-and-working-hours {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-section .contact-container .form-container h1 {
+    font-size: 2rem;
+  }
+  .contact-section .contact-container .form-container p {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=contact.css.map */

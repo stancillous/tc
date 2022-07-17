@@ -1,0 +1,309 @@
+html.has-scroll-smooth {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-direction=horizontal] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+[data-scroll-direction=horizontal] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+[data-scroll-direction=horizontal] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
+}
+
+[data-scroll-direction=horizontal] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+[data-scroll-direction=horizontal] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
+}
+
+
+
+.header {
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  z-index: 33;
+  display: grid;
+  place-items: center;
+}
+.header .navbar {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  padding: 0 2rem;
+}
+.header .navbar::after {
+  content: "";
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  z-index: -1;
+}
+.header .navbar .logo a {
+  font-size: 4.2rem;
+  color: white;
+  font-weight: bolder;
+  font-family: "Satoshi", sans-serif, "General Sans", sans-serif, garamond;
+  text-decoration: none;
+  opacity: 0.9;
+}
+.header .navbar .menu-links ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.header .navbar .menu-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+  padding: 0 0.5rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  opacity: 0.9;
+  text-shadow: 2px 2px 2px 2px black;
+}
+
+.footer {
+  background-color: #373737;
+  background-color: #071e59;
+}
+.footer .footer-section-container .footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.footer .footer-section-container .footer-content div {
+  padding: 4rem;
+}
+.footer .footer-section-container .footer-content p {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.5rem 0;
+  opacity: 0.9;
+}
+.footer .footer-section-container .footer-content h1 {
+  font-size: 1.8rem;
+  color: white;
+  text-transform: capitalize;
+  padding: 1.3rem 0;
+}
+.footer .footer-section-container .footer-content button {
+  margin-top: 1rem;
+  background-color: #0a0445;
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+  border: 1px solid white;
+  padding: 1.4rem 2.5rem;
+  text-transform: uppercase;
+}
+.footer .footer-section-container .footer-content input {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  font-size: 1.4rem;
+  border: 1px solid black;
+  padding: 1.2rem 2rem;
+  font-family: "Satoshi", sans-serif, "General Sans", sans-serif;
+  margin: 1rem 0;
+  width: 100%;
+}
+.footer .footer-section-container .footer-content select {
+  font-family: "Satoshi", sans-serif, "General Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 1rem 1.3rem;
+  background-color: white;
+  color: #000;
+  width: 100%;
+  margin: 1rem 0;
+}
+.footer .footer-section-container .footer-content textarea {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: "Satoshi", sans-serif, "General Sans", sans-serif;
+  background-color: white;
+  color: black;
+  border: none;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+.footer .footer-section-container .footer-content .address p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.hamburger-button {
+  position: absolute;
+  top: 4%;
+  right: 8%;
+  background-color: rgb(0, 0, 0);
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3434;
+  display: none;
+}
+.hamburger-button span {
+  height: 0.3rem;
+  width: 3rem;
+  background-color: white;
+  padding: 0.1rem;
+  margin: 0.7rem 0;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+  .header .navbar {
+    width: 100%;
+  }
+  .header .navbar .logo a {
+    font-size: 3.5rem;
+  }
+  .header .navbar .menu-links {
+    z-index: 344;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-clip-path: inset(0 0 100% 0);
+            clip-path: inset(0 0 100% 0);
+    transition: all 0.7s ease;
+  }
+  .header .navbar .menu-links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70%;
+    width: 100%;
+    align-items: center;
+  }
+  .hamburger-button {
+    display: block;
+    z-index: 2222;
+  }
+}
+.hamburger-button:hover span:nth-child(1) {
+  transform: translateX(-0.4rem);
+}
+.hamburger-button:hover span:nth-child(2) {
+  transform: translateX(0.4rem);
+}
+
+.hamburger-button.hamburgerClicked span:nth-child(1) {
+  width: 3.3rem;
+  transform: translate(0.1rem, 0.9rem) rotate(-45deg);
+}
+.hamburger-button.hamburgerClicked span:nth-child(2) {
+  width: 3.3rem;
+  transform: translate(-0.1rem, -0.01rem) rotate(45deg);
+}
+
+.header .navbar .menu-links.showlinks {
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+}
+
+.header .navbar .menu-links ul li.active-link a {
+  position: relative;
+}
+.header .navbar .menu-links ul li.active-link a::after {
+  content: "";
+  position: absolute;
+  bottom: -25%;
+  left: 0;
+  right: 0;
+  display: block;
+  height: 0.2rem;
+  background-color: rgb(255, 255, 255);
+}/*# sourceMappingURL=utils.css.map */

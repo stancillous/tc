@@ -1,0 +1,286 @@
+
+// importing css to style the header and footer
+
+@import url('../utils/utils.css');
+
+$web-font1:"Satoshi", sans-serif;
+$web-font2:"General Sans", sans-serif;
+// font weights
+
+$light:300;
+$regular:400;
+$medium:500;
+$bold:700;
+$black:900;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: $web-font1,$web-font2;
+    overflow-x: hidden;
+    background-color: rgb(202, 216, 248);
+    color: black;
+
+}
+
+.main{
+    opacity: 0;
+}
+
+.contact-image-section{
+    height: 80vh;
+    width: 100vw;
+    position: relative;
+
+    
+    .image-container{
+        height: 100%;
+        z-index: -1;
+        width: 100%;
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            
+        }
+    }
+}
+
+
+.contact-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // height: 100vh;
+    width: 100vw;
+    margin-top: 3rem;
+    color: black;
+
+    .contact-container{
+        width:90%;
+        // border: 2px solid;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        // align-items: center;
+
+
+
+        .reach-us-container{
+            // margin: 2rem;
+                border-right: 1px solid black;
+  
+
+            .numbers-and-working-hours{
+                // border: 1px solid blue;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                
+                div{
+                    margin: 1rem;
+
+                    // border: 2px solid black;
+                    padding: 1rem;
+
+
+                    h2{
+                        font-size: 1.7rem;
+                       font-weight: $black;
+                       // color: $web-color;
+                        opacity: .9;
+                        text-transform: capitalize;
+                        // padding: 1rem 0;
+                    
+                        padding: .5rem 0;
+                        padding-top: 3rem;
+                   
+                    }
+    
+                    p{
+                       font-weight: $bold;
+                        // font-weight: $medium;
+                        font-size: 1.5rem;
+                        opacity: .9;
+                        padding: .5rem 0;
+    
+    
+                    }
+                
+                }
+
+
+
+
+            }
+
+        }
+
+        .form-container{
+            margin: 2rem;
+            h1{
+               // font-weight: $bold;
+                font-size: 2.6rem;
+                text-transform: capitalize;
+                opacity: .9;
+                font-weight: $bold;
+                padding: 0 1rem;
+
+            }
+
+            p{
+            font-size: 2rem;
+               font-weight: $bold;
+                padding: 1rem;
+                padding-bottom: 4rem;
+            }
+            #form{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+                .info{
+                    padding: 3rem 1rem;
+                    // border: 2px solid;
+                    width: 100%;
+                    label{
+                        font-size: 1.6rem;
+                        opacity: .9;
+                        color: rgb(0, 0, 0);
+                       font-weight: $bold;
+                    }
+    
+                    input{
+                        // text-transform: uppercase;
+                        padding: 1rem;
+                        width: 100%;
+                        margin-bottom: 2rem;
+                       font-weight: $medium;
+                        border: none;
+                        color: rgb(0, 0, 0);
+                        font-size: 1.4rem;
+                        background-color: transparent;
+                        border-bottom: 1px solid black;
+                        width: 100%;
+                        &:focus{
+                            outline: none;
+                            border: 1px solid rgb(0, 0, 0);
+                        }
+                    }
+                    
+                    //textarea
+                    #message{
+                        width: 100%;
+                        font-size: 1.4rem;
+                       font-weight: $medium;
+                        color: black;
+                        padding: 1rem;
+                        font-family: $web-font1,$web-font2;
+
+
+                    }
+
+                    button{
+                        padding: 1.5rem 4rem;
+                        border: none;
+                        color: white;
+                       font-weight: $bold;
+                        border-radius: .2rem;
+                        cursor: pointer;
+                        text-transform: uppercase;
+                        background-color: darkblue;
+    
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+//FOR LARGER SCREEBS
+@media screen and(min-width:1380px) {
+    
+    .contact-section{
+        .contact-container{
+            width: 70%;
+        }
+    }
+}
+@media screen and(min-width:1600px) {
+    
+    .contact-section{
+        .contact-container{
+            width: 50%;
+        }
+    }
+}
+
+
+
+//FOR SMALLER SCREENS
+@media screen and(max-width:960px) {
+    .contact-section{
+        .contact-container{
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+
+            .reach-us-container{
+                border: unset;
+                border-bottom: 1px solid black;
+                margin-bottom: 5rem;
+                padding: 2rem;
+                padding-bottom: 4rem;
+            }
+        }
+    }
+}
+
+@media screen and(max-width:600px) {
+    .contact-section{
+        .contact-container{
+            width:95%;
+
+        }
+    }
+}
+
+
+@media screen and(max-width:503px) {
+    .contact-section{
+        .contact-container{
+            width:95%;
+   
+            .reach-us-container{
+                .numbers-and-working-hours{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
+
+            .form-container{
+                h1{
+                    font-size: 2rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                }
+            }
+
+        }
+    }
+}
+

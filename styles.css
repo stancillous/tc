@@ -1,0 +1,438 @@
+@import url("utils/utils.css");
+button {
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Satoshi", sans-serif, "General Sans", sans-serif;
+  overflow-x: hidden;
+  color: black;
+  background-color: rgb(202, 216, 248);
+}
+
+.main {
+  opacity: 0;
+}
+
+.top-section {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.top-section .image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.top-section .image-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.top-section .ts-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-section .ts-container .ts-content {
+  padding: 0 5rem;
+}
+.top-section .ts-container .ts-content .heading h1 {
+  padding: 1rem;
+  color: white;
+  font-weight: 900;
+  font-size: 6rem;
+  text-transform: capitalize;
+}
+.top-section .ts-container .ts-content .ts-p p {
+  padding: 1rem;
+  color: white;
+  opacity: 0.9;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.top-section .ts-container .ts-content .button-container {
+  padding: 1rem;
+}
+.top-section .ts-container .ts-content .button-container button {
+  background-color: white;
+  opacity: 0.9;
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 1.4rem 2.5rem;
+}
+.top-section .ts-container .ts-content .button-container button a {
+  color: black;
+  text-decoration: none;
+}
+
+.about-us-section {
+  min-height: 50vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-us-section .au-container {
+  width: 70%;
+}
+.about-us-section .au-container .auc-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-us-section .au-container .auc-parent .au-content {
+  width: 100%;
+  display: flex;
+  padding: 3rem 1rem;
+}
+.about-us-section .au-container .auc-parent .au-content .au-headings {
+  border-right: 1px solid black;
+  display: flex;
+  padding-right: 2rem;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.about-us-section .au-container .auc-parent .au-content .au-headings h1 {
+  cursor: pointer;
+  padding: 1.2rem 0;
+  width: 16rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 900;
+}
+.about-us-section .au-container .auc-parent .au-p p {
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 0 3rem;
+}
+
+.freight-section {
+  height: 80vh;
+  width: 100vw;
+}
+.freight-section .fs-container {
+  position: relative;
+  height: 100%;
+}
+.freight-section .fs-container .freight-image-container {
+  width: 100%;
+  height: 100%;
+}
+.freight-section .fs-container .freight-image-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.freight-section .fs-container .f-heading-parent {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.freight-section .fs-container .f-heading-parent h1 {
+  color: white;
+  font-weight: 900;
+  font-size: 2.8rem;
+  text-transform: capitalize;
+}
+
+.freight-content-section {
+  min-height: 50vh;
+  display: grid;
+  place-items: center;
+}
+.freight-content-section .fcs-container {
+  display: grid;
+  place-items: center;
+  width: 70%;
+}
+.freight-content-section .fcs-container .fsc-content {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+}
+.freight-content-section .fcs-container .fsc-content p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: black;
+  padding: 1rem;
+  padding: 2rem 0;
+  line-height: 160%;
+}
+
+.reviews-section {
+  height: 100vh;
+  width: 100vw;
+  padding: 8rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reviews-section .rs-container {
+  height: 100%;
+  width: 45%;
+  position: relative;
+}
+.reviews-section .rs-container #arrowLeft {
+  position: absolute;
+  top: 60%;
+  font-size: 3.5rem;
+  left: -10%;
+  color: rgb(25, 33, 255);
+  cursor: pointer;
+}
+.reviews-section .rs-container #arrowRight {
+  position: absolute;
+  top: 60%;
+  font-size: 3.5rem;
+  right: -10%;
+  color: rgb(25, 33, 255);
+  cursor: pointer;
+}
+.reviews-section .rs-container h1 {
+  font-size: 2.7rem;
+  text-transform: capitalize;
+  color: black;
+  padding: 2rem 0;
+  text-align: center;
+  font-weight: 900;
+}
+.reviews-section .rs-container .rs-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reviews-section .rs-container .rs-content .review {
+  width: 100%;
+  padding: 4rem;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: white;
+}
+.reviews-section .rs-container .rs-content .review .review-image {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  border: 2px double rgb(0, 0, 0);
+}
+.reviews-section .rs-container .rs-content .review .review-name {
+  font-size: 1.7rem;
+  font-style: italic;
+  color: black;
+  opacity: 0.9;
+  font-weight: 500;
+}
+.reviews-section .rs-container .rs-content .review .review-text {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: black;
+  padding-top: 2rem;
+}
+
+.top-section .hamburger-button:hover span:nth-child(1) {
+  transform: translateX(-0.4rem);
+}
+.top-section .hamburger-button:hover span:nth-child(2) {
+  transform: translateX(0.4rem);
+}
+
+.top-section .hamburger-button.hamburgerClicked span:nth-child(1) {
+  width: 3.3rem;
+  transform: translate(0.1rem, 0.9rem) rotate(-45deg);
+}
+.top-section .hamburger-button.hamburgerClicked span:nth-child(2) {
+  width: 3.3rem;
+  transform: translate(-0.1rem, -0.01rem) rotate(45deg);
+}
+
+.top-section .header .navbar .menu-links.showlinks {
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+}
+
+.about-us-section .au-container .auc-parent .au-content .au-headings .active {
+  position: relative;
+  background-color: blue;
+  border-radius: 0.2rem;
+  color: white;
+}
+
+@media screen and (min-width: 1370px) {
+  .about-us-section .au-container {
+    width: 55%;
+  }
+  .freight-content-section .fcs-container {
+    width: 55%;
+  }
+  .reviews-section .rs-container {
+    width: 41%;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .about-us-section .au-container {
+    width: 46%;
+  }
+  .freight-content-section .fcs-container {
+    width: 56%;
+  }
+  .reviews-section .rs-container {
+    width: 38%;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .reviews-section .rs-container {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .top-section .ts-container .ts-content .heading h1 {
+    font-size: 4.4rem;
+  }
+  .top-section .ts-container .ts-content .ts-p p {
+    font-size: 1.7rem;
+  }
+  .about-us-section .au-container {
+    width: 94%;
+  }
+  .freight-content-section .fcs-container {
+    width: 94%;
+  }
+  .freight-content-section .fcs-container .fsc-content p {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 760px) {
+  .reviews-section .rs-container {
+    width: 70%;
+  }
+  .reviews-section .rs-container h1 {
+    font-size: 2.4rem;
+  }
+  .reviews-section .rs-container .rs-content .review {
+    padding: 5rem 2rem;
+  }
+  .reviews-section .rs-container .rs-content .review .review-text {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .top-section .ts-container .ts-content {
+    padding: 2rem;
+  }
+  .top-section .ts-container .ts-content .heading h1 {
+    font-size: 3.8rem;
+  }
+  .top-section .ts-container .ts-content .ts-p p {
+    font-size: 1.6rem;
+  }
+  .top-section .ts-container .ts-content .ts-p p br {
+    content: " ";
+  }
+  .top-section .ts-container .ts-content .ts-p p br:after {
+    content: " ";
+  }
+  .about-us-section .au-container .auc-parent {
+    border: 1px solid;
+  }
+  .about-us-section .au-container .auc-parent .au-content {
+    flex-direction: column;
+  }
+  .about-us-section .au-container .auc-parent .au-content .au-headings {
+    display: flex;
+    border: unset;
+    border: 1px solid;
+    flex-direction: unset;
+    margin-bottom: 4rem;
+    padding: unset;
+  }
+  .about-us-section .au-container .auc-parent .au-content .au-headings h1 {
+    width: auto;
+    font-size: 1.3rem;
+    padding: 1rem;
+  }
+  .about-us-section .au-container .auc-parent .au-p p {
+    padding: 1rem;
+    font-size: 1.4rem;
+  }
+  .freight-content-section .fcs-container {
+    width: 90%;
+  }
+  .freight-content-section .fcs-container .fsc-content {
+    grid-template-columns: 1fr;
+  }
+  .reviews-section .rs-container {
+    width: 95%;
+  }
+  .reviews-section .rs-container h1 {
+    font-size: 2.2rem;
+  }
+  .reviews-section .rs-container .rs-content .review {
+    padding: 5rem 1.5rem;
+  }
+  .reviews-section .rs-container .rs-content .review .review-image {
+    width: 6rem;
+    height: 6rem;
+  }
+  .reviews-section .rs-container .rs-content .review .review-name {
+    font-size: 1.5rem;
+  }
+  .reviews-section .rs-container .rs-content .review .review-text {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .top-section .ts-container .ts-content {
+    padding: 2rem;
+  }
+  .top-section .ts-container .ts-content .heading h1 {
+    font-size: 3.4rem;
+  }
+  .top-section .ts-container .ts-content .ts-p p {
+    font-size: 1.5rem;
+  }
+  .top-section .ts-container .ts-content .button-container button {
+    padding: 1rem 1.3rem;
+  }
+  .reviews-section {
+    height: 150vh;
+  }
+  .reviews-section .rs-container {
+    width: 95%;
+  }
+  .reviews-section .rs-container #arrowRight, .reviews-section .rs-container #arrowLeft {
+    top: 70%;
+  }
+  .reviews-section .rs-container h1 {
+    font-size: 2rem;
+  }
+  .reviews-section .rs-container .rs-content .review .review-name {
+    font-size: 1.3rem;
+  }
+  .reviews-section .rs-container .rs-content .review .review-text {
+    font-size: 1.4rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
