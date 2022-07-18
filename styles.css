@@ -253,27 +253,6 @@ body {
   padding-top: 2rem;
 }
 
-.top-section .hamburger-button:hover span:nth-child(1) {
-  transform: translateX(-0.4rem);
-}
-.top-section .hamburger-button:hover span:nth-child(2) {
-  transform: translateX(0.4rem);
-}
-
-.top-section .hamburger-button.hamburgerClicked span:nth-child(1) {
-  width: 3.3rem;
-  transform: translate(0.1rem, 0.9rem) rotate(-45deg);
-}
-.top-section .hamburger-button.hamburgerClicked span:nth-child(2) {
-  width: 3.3rem;
-  transform: translate(-0.1rem, -0.01rem) rotate(45deg);
-}
-
-.top-section .header .navbar .menu-links.showlinks {
-  -webkit-clip-path: inset(0 0 0 0);
-          clip-path: inset(0 0 0 0);
-}
-
 .about-us-section .au-container .auc-parent .au-content .au-headings .active {
   position: relative;
   background-color: blue;
@@ -417,14 +396,8 @@ body {
   .top-section .ts-container .ts-content .button-container button {
     padding: 1rem 1.3rem;
   }
-  .reviews-section {
-    height: 150vh;
-  }
   .reviews-section .rs-container {
     width: 95%;
-  }
-  .reviews-section .rs-container #arrowRight, .reviews-section .rs-container #arrowLeft {
-    top: 70%;
   }
   .reviews-section .rs-container h1 {
     font-size: 2rem;

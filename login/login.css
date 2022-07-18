@@ -19,9 +19,13 @@ body {
   color: black;
 }
 
+.main {
+  opacity: 0;
+}
+
 .login-image-section {
   position: relative;
-  height: 100vh;
+  height: 150vh;
   width: 100vw;
 }
 .login-image-section .login-header-and-form {

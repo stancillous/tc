@@ -189,7 +189,7 @@ body{
     // min-height: 100vh;
     height: 80vh;
     width: 100vw;
-
+    // border: 2px solid red;
     .fs-container{
         position: relative;
         height: 100%;
@@ -338,54 +338,12 @@ body{
     }
 }
 
-
-//CLASSES TO BE TOGGLED
-
-.top-section .hamburger-button:hover{
-    span{
-        &:nth-child(1){
-            transform: translateX(-.4rem);
-        }
-        &:nth-child(2){
-            // width: 2.8rem;
-            transform: translateX(.4rem);
-        }
-    }
-}
-
-//class to be added when the button is clicked
-.top-section .hamburger-button.hamburgerClicked{
-
-    span{
-        &:nth-child(1){
-            // background-color: red;
-            width: 3.3rem;
-            transform: translate(.1rem,.9rem)rotate(-45deg);
-        }
-        &:nth-child(2){
-            width: 3.3rem;
-            transform: translate(-.1rem,-.01rem)rotate(45deg);
-        }
-    }
-}
-
-
-//CLASS TO SHOW THE MENU LINKS
-
-
-.top-section .header .navbar .menu-links.showlinks{
-    clip-path: inset(0 0 0 0);
-}
-
-
-//CLASS TO BE TOGGLED TO THE ABOUT US SECTION ACTIVE HEADERS
-.about-us-section .au-container .auc-parent .au-content .au-headings .active{
+//THE ACTIVE ABOUT US HEADING IN THE SECOND SECTION OF THE HOME PAGE
+.about-us-section .au-container .auc-parent .au-content .au-headings .active {
     position: relative;
-    // border: 2px solid;
     background-color: blue;
-    border-radius: .2rem;
+    border-radius: 0.2rem;
     color: white;
-
 }
 
 //FOR LARGER SCREENS
@@ -646,13 +604,9 @@ body{
 
         //review section
         .reviews-section{
-            height: 150vh;
+            // height: 150vh;
             .rs-container{
                 width: 95%;
-
-                #arrowRight,#arrowLeft{
-                    top: 70%;
-                }
     
                 h1{
                     font-size: 2rem;
