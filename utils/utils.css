@@ -89,8 +89,6 @@ html.has-scroll-dragging {
   bottom: 0;
 }
 
-
-
 .header {
   position: absolute;
   height: 15vh;
@@ -273,13 +271,6 @@ html.has-scroll-dragging {
     z-index: 2222;
   }
 }
-.hamburger-button:hover span:nth-child(1) {
-  transform: translateX(-0.4rem);
-}
-.hamburger-button:hover span:nth-child(2) {
-  transform: translateX(0.4rem);
-}
-
 .hamburger-button.hamburgerClicked span:nth-child(1) {
   width: 3.3rem;
   transform: translate(0.1rem, 0.9rem) rotate(-45deg);

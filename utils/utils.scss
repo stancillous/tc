@@ -325,17 +325,6 @@ html.has-scroll-smooth {
 
 //CLASSES TO BE TOGGLED
 
-.hamburger-button:hover{
-  span{
-      &:nth-child(1){
-          transform: translateX(-.4rem);
-      }
-      &:nth-child(2){
-          // width: 2.8rem;
-          transform: translateX(.4rem);
-      }
-  }
-}
 
 //class to be added when the button is clicked
 .hamburger-button.hamburgerClicked{

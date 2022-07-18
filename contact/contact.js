@@ -1,16 +1,9 @@
 
 window.addEventListener('load',()=>{
     animatePage()
-    initLocomotiveScroll()
 })
 
-// INITIALIZING THE LOCOMOTIVE SCROLL
-function initLocomotiveScroll(){
-    const scroll = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true
-    });
-}
+
 
 function animatePage(){
     let tl = gsap.timeline({

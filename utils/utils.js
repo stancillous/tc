@@ -1,4 +1,27 @@
 
+window.addEventListener('load',()=>{
+    initLocomotiveScroll()
+})
+
+// INITIALIZING THE LOCOMOTIVE SCROLL
+function initLocomotiveScroll(){
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+
+         smartphone: {
+            smooth: true,
+            multiplier:1.2,
+        },
+        tablet: {
+            smooth: true,
+            multiplier:1.2,
+
+        }
+    });
+}
+
+
 
 //THE HAMBURGER BUTTON AND MENU LINKS
 const menulinks = document.querySelector('.menu-links')

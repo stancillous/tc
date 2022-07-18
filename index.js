@@ -2,25 +2,8 @@
 
 window.addEventListener('load',()=>{
     animatePage()
-    initLocomotiveScroll()
+    showReview()
 })
-
-// INITIALIZING THE LOCOMOTIVE SCROLL
-function initLocomotiveScroll(){
-    const scroll = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
-         smartphone: {
-            smooth: true
-        },
-        tablet: {
-            smooth: true
-        },
-        mobile:{
-            smooth:true
-        }
-    });
-}
 
 
 //SETTING ANIMATION FOR WHEN THE PAGE LOADS
@@ -185,4 +168,4 @@ function showReview(){
 
 }
 
-showReview()
+
